@@ -1,0 +1,220 @@
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapped-all{
+    width: 90%;
+}
+
+.first-part{
+    margin-bottom: 18px;
+    border: 1px solid hsl(228, 56%, 26%);
+    border-radius: 8px 100px 8px 8px;
+    background-color: var(--Dark-Blue);
+}
+
+.wrap-content-firs-part{
+    padding: 2em 0 2em 2.5em;
+}
+
+.wrap-logo{
+    margin-bottom: 1.5em;
+}
+
+.three-image{
+    padding: 12px;
+    width: 23px;
+    height: 20px;
+    border-radius: 8px;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.wrap-document, .wrap-folder, .wrap-upload{
+    display: inline-block;
+}
+
+.wrap-document, .wrap-folder{
+    margin-right: 10px;
+}
+
+.img-document{
+    padding-top: 9px;
+    height: 23px;
+}
+
+.second-part{
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid hsl(228, 56%, 26%);
+    border-radius: 8px;
+    background-color: hsl(228, 56%, 26%);
+}
+
+.storage-used{
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.815);
+    font-weight: 400;
+    text-align: center;
+}
+
+.bold{
+    color: white;
+    font-weight: 700;
+}
+
+.wrapped-bar{
+    width: 80%;
+}
+
+.wrap-bar{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.bar{
+    position: relative;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 8px;
+    height: 16px;
+    width: 75%;
+    background: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.circle{
+    margin-right: 1.5px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+}
+
+.total-gb{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.815);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.wrap-gb-left{
+    display: flex;
+    justify-content: center;
+}
+
+.gb-left{
+    display: inline-block;
+    position: relative;
+    bottom: 45px;
+    z-index: 5;
+}
+
+.gb-left p{
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    color: hsla(229, 57%, 11%, 0.829);
+    font-weight: 700;
+}
+
+.available{
+    padding-right: 8px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: hsl(229, 57%, 11%);
+}
+
+.attribution {
+    position: relative;
+    bottom: 0;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1200px){
+    body{
+        background-image: url(images/bg-desktop.png);
+        background-size: contain;
+        background-position-y: 100%;
+        background-color: hsl(229, 57%, 11%);
+    }
+    .wrapped-all{
+        display: flex;
+        justify-content: center;
+    }
+    .first-part{
+        margin-right: 25px;
+        width: 350px;
+    }
+    .wrap-second-part{
+        margin-top: 25px;
+        height: 0;
+    }
+    .second-part{
+        width: 665px;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    .wrap-gb-left{
+        position: relative;
+        bottom: 100px;
+    }
+    .storage-used{
+        width: 100%;
+        text-align: left;
+        padding-left: 8.7em;
+    }
+    .wrap-gb-left{
+        left: 190px;
+        bottom: 175px;
+    }
+    .gb-left::before {
+        content: "";
+        position: absolute;
+        bottom: -0.5em;
+        right: 0;
+        border-top: 0 solid transparent;
+        border-right: 2em solid transparent;
+        border-bottom: 2em solid white;
+        transform: rotate(180deg);
+    }
+    .wrap-bar{
+        width: 535px;
+    }
+}
